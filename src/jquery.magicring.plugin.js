@@ -8,8 +8,10 @@
 				height       : 200,
 				rings        : 3,
 				spacing      : 90,
-				skewX        : 0,
-				skewY        : 0
+				_3dX          : 0,
+				_3dY          : 0,
+				_3dZ          : 0,
+				_3dDeg        : 0
 			};		
 
 			var options = $.extend(defaults, options);
@@ -24,8 +26,10 @@
 				var ri = o.rings;
 				var sl = o.spacing;
 				var ft = o.font;
-				var SX = o.skewX;
-				var SY = o.skewY;
+				var DX = o._3dX;
+				var DY = o._3dY;
+				var DZ = o._3dZ;
+				var Dd = o._3dDeg;
 
 				$('head').append('<style>'
 								+'@font-face{font-family: MagicRing;src: url(' + ft + ');}'
@@ -36,11 +40,11 @@
 					     'position' : 'relative',
 					     'width'    : (ht+sl*ri+20) + 'px',
 					     'height'   : (ht+sl*ri+20) + 'px',
-					     'webkitTransform' : 'skewX(' + SX + 'deg) skewY(' + SY + 'deg) ',
-					        'MozTransform' : 'skewX(' + SX + 'deg) skewY(' + SY + 'deg) ',
-					         'msTransform' : 'skewX(' + SX + 'deg) skewY(' + SY + 'deg) ',
-					          'OTransform' : 'skewX(' + SX + 'deg) skewY(' + SY + 'deg) ',
-					           'transform' : 'skewX(' + SX + 'deg) skewY(' + SY + 'deg) ',});
+					     'webkitTransform' : 'rotate3d(' + DX + ',' + DY + ',' + DZ + ',' + Dd + 'deg) ',
+					        'MozTransform' : 'rotate3d(' + DX + ',' + DY + ',' + DZ + ',' + Dd + 'deg) ',
+					         'msTransform' : 'rotate3d(' + DX + ',' + DY + ',' + DZ + ',' + Dd + 'deg) ',
+					          'OTransform' : 'rotate3d(' + DX + ',' + DY + ',' + DZ + ',' + Dd + 'deg) ',
+					           'transform' : 'rotate3d(' + DX + ',' + DY + ',' + DZ + ',' + Dd + 'deg) '});
 
 				function RandString(int_x) {
 				  	var temp="";
