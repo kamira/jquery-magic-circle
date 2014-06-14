@@ -8,8 +8,8 @@
 				height       : 200,
 				rings        : 3,
 				spacing      : 90,
-				SkewX        : 0,
-				SkewY        : 0
+				skewX        : 0,
+				skewY        : 0
 			};		
 
 			var options = $.extend(defaults, options);
@@ -24,8 +24,8 @@
 				var ri = o.rings;
 				var sl = o.spacing;
 				var ft = o.font;
-				var SX = o.SkewX;
-				var SY = o.SkewY;
+				var SX = o.skewX;
+				var SY = o.sSkewY;
 
 				$('head').append('<style>'
 								+'@font-face{font-family: MagicRing;src: url(' + ft + ');}'
