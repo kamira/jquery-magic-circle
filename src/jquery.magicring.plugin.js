@@ -25,7 +25,7 @@
 				var sl = o.spacing;
 				var ft = o.font;
 				var SX = o.skewX;
-				var SY = o.sSkewY;
+				var SY = o.skewY;
 
 				$('head').append('<style>'
 								+'@font-face{font-family: MagicRing;src: url(' + ft + ');}'
